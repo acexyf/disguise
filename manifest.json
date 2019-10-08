@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "disguiser",
+    "version": "1.0.0",
+    "description": "伪装者",
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                ""
+            ],
+            "css": [],
+            "run_at": "document_start"
+        }
+    ],
+    "background": {
+        "page": "background.html"
+    },
+    "web_accessible_resources": [],
+    "homepage_url": "",
+    "browser_action": {
+        "default_icon": "imgs/icon.png",
+        "default_title": "伪装者"
+    }
+}
