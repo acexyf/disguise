@@ -7,24 +7,38 @@ document.addEventListener('DOMContentLoaded', function () {
         appclass: 'kr36'
     }]
 
+    //是否开启插件
+    var isOpen = true
     //imgMode是否是无图模式 true无图模式
     var noImgMode = false
 
-    chrome.storage.local.get({
-        'mode_img': false
-    }, function (result) {
-        console.log(result)
-        noImgMode = result['mode_img']
-        if (noImgMode) {
-            firstDiv.classList.add('no_img')
-        }
-    })
 
+    if (chrome.storage) {
+        chrome.storage.local.get({
+            'mode_open': true
+        }, function (result) {
 
-    classHostList.map(function (elem) {
-        if (window.location.hostname === elem.hostname) {
-            firstDiv.classList.add(elem.appclass)
-        }
-    })
+            isOpen = result['mode_open']
+
+            if (isOpen) {
+
+                chrome.storage.local.get({
+                    'mode_img': false
+                }, function (result1) {
+                    noImgMode = result1['mode_img']
+                    if (noImgMode) {
+                        firstDiv.classList.add('no_img')
+                    }
+                })
+
+                classHostList.map(function (elem) {
+                    if (window.location.hostname === elem.hostname) {
+                        firstDiv.classList.add(elem.appclass)
+                    }
+                })
+            }
+
+        })
+    }
 
 });

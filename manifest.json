@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "disguiser",
     "version": "1.0.0",
-    "description": "伪装者",
+    "description": "上班偷偷新闻",
     "icons": {
         "16": "img/icon16.png",
         "32": "img/icon32.png",
@@ -25,7 +25,7 @@
         }
     ],
     "background": {
-        "page": "background/background.html",
+        "page": "background.html",
         "persistent": false
     },
     "web_accessible_resources": [
