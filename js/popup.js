@@ -5,37 +5,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (chrome.storage) {
         chrome.storage.local.get({
-            'mode_img': false
+            'mode_img': false,
+            'mode_open': true
         }, function (result) {
             console.log(result)
             imgModeInput.checked = result['mode_img']
+            openModeInput.checked = result['mode_open']
         })
-        chrome.storage.local.get({
-            'mode_open': false
-        }, function (result) {
-            console.log(result)
-            imgModeInput.checked = result['mode_img']
-        })
-    }
 
-    imgModeInput.onchange = function () {
-        var checked = this.checked
-        if (checked) {
-            document.getElementsByTagName('body')[0].children[0].classList.add('no_img')
-        } else {
-            document.getElementsByTagName('body')[0].children[0].classList.remove('no_img')
-        }
-        if (chrome.storage) {
+        imgModeInput.onchange = function () {
+            var checked = this.checked
+            console.log(checked, 'imgModeInput')
             chrome.storage.local.set({ 'mode_img': checked });
         }
-    }
 
-    openModeInput = function () {
-        var checked = this.checked
-        if (chrome.storage) {
+        openModeInput.onchange = function () {
+            var checked = this.checked
+            console.log(checked, 'openModeInput')
             chrome.storage.local.set({ 'mode_open': checked });
         }
     }
-
 
 });    
