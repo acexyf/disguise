@@ -13,6 +13,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     imgModeInput.onchange = function () {
         var checked = this.checked
+
+        if (checked) {
+            document.getElementsByTagName('body')[0].children[0].classList.add('no_img')
+        } else {
+            document.getElementsByTagName('body')[0].children[0].classList.remove('no_img')
+        }
+
         if (chrome.storage) {
             chrome.storage.local.set({ 'mode_img': checked });
         }

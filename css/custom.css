@@ -19,6 +19,9 @@
     display: none;
 }
 
+.kr36 .article-wrapper .content h2 {
+    color: #262626;
+}
 
 /* 36kr无图模式 */
 .kr36.no_img .article-wrapper .content p img {
