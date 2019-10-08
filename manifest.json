@@ -3,6 +3,12 @@
     "name": "disguiser",
     "version": "1.0.0",
     "description": "伪装者",
+    "icons": {
+        "16": "img/icon.png",
+        "32": "img/icon.png",
+        "48": "img/icon.png",
+        "128": "img/icon.png"
+    },
     "content_scripts": [
         {
             "matches": [
@@ -16,12 +22,13 @@
         }
     ],
     "background": {
-        "page": "background.html"
+        "page": "background/background.html",
+        "persistent": false
     },
     "web_accessible_resources": [],
-    "homepage_url": "",
+    "homepage_url": "https://acexyf.github.io",
     "browser_action": {
-        "default_icon": "imgs/icon.png",
+        "default_icon": "img/icon.png",
         "default_title": "伪装者"
     }
 }
