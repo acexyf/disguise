@@ -1,0 +1,30 @@
+/* 36kr */
+.kr36 .kr-layout .kr-layout-main .main-left {
+    display: none;
+}
+
+.kr36 .kr-information-right {
+    display: none;
+}
+
+.kr36 .kr-article .kr-article-inner .article-detail-wrapper-box .article-right-container {
+    display: none;
+}
+
+.kr36 .kr-header {
+    display: none;
+}
+
+.kr36 .kr-article .kr-article-inner .article-detail-wrapper-box .article-left-container .navbar-wrapper {
+    display: none;
+}
+
+
+/* 36kr无图模式 */
+.kr36.no_img .article-wrapper .content p img {
+    display: none;
+}
+
+.kr36.no_img .kr-flow-article-item .article-item-pic-wrapper {
+    display: none;
+}
