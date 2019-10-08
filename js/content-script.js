@@ -9,9 +9,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //imgMode是否是无图模式 true无图模式
     var noImgMode = false
-    if (noImgMode) {
-        firstDiv.classList.add('no_img')
-    }
+
+    chrome.storage.local.get({
+        'mode_img': false
+    }, function (result) {
+        console.log(result)
+        noImgMode = result['mode_img']
+        if (noImgMode) {
+            firstDiv.classList.add('no_img')
+        }
+    })
+
 
     classHostList.map(function (elem) {
         if (window.location.hostname === elem.hostname) {

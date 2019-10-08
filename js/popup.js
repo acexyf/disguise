@@ -1,7 +1,8 @@
 
 document.addEventListener('DOMContentLoaded', function () {
     var imgModeInput = document.getElementsByClassName('disguiser_img')[0]
-    if (chrome, chrome.storage) {
+    console.log(chrome, chrome.storage)
+    if (chrome.storage) {
         chrome.storage.local.get({
             'mode_img': false
         }, function (result) {
