@@ -24,7 +24,7 @@
 }
 
 /* 36kr无图模式 */
-.kr36.no_img .article-wrapper .content p img {
+.kr36.no_img .article-wrapper .content img {
     display: none;
 }
 
